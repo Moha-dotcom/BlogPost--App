@@ -1,0 +1,9 @@
+spring:
+  jpa:
+    hibernate:
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/BlogPost
+    username: root
+    password: Muhaz8164@
+    driver-class-name: com.mysql.cj.jdbc.Driver

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 " style="margin: 60px">
+      <app-header></app-header>
+      <app-blog (receive) ="onCreatePost($event)"></app-blog>
+      <h1 style="text-align: center; margin-bottom: 40px"><span class="badge bg-primary" >List of Blog Posts</span></h1>
+      <app-blog-list *ngFor="let post of BlogPost"  [element] = "post" > </app-blog-list>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
