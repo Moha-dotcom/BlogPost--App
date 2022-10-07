@@ -1,0 +1,48 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <title>Bootstrap Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="p-3 m-0 border-0 bd-example">
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 " style="margin: 20px; margin-left: 35px">
+      <form >
+
+        <div class="form-group">
+          <label for="author" class="form-label">Author</label>
+          <input  class="form-control form-group" type="text" name="author" id="author" placeholder="author" #authorInput>
+          <p>{{authorInput.value}}</p>
+        </div>
+
+        <div class="form-group">
+          <label for="Postheader" class="form-label">Post Header</label>
+          <input  class="form-control form-group" type="text" name="author" id="Postheader" placeholder="Post header " #postheaderInput>
+        </div>
+
+        <div class="form-group">
+          <label for="post" class="form-label">Post</label>
+<!--          <input style="height: 100px; text-align: start"  class="input-group-text" type="text" name="post" id="post" #Postinput>-->
+          <textarea class="form-control" aria-label="With textarea" #Postinput></textarea>
+          <small id="emailHelp" class="form-text text-muted">Share your Post here</small>
+        </div>
+
+        <button  type="button" class="btn btn-primary" (click)="ProjectInputs(authorInput, postheaderInput, Postinput)">Post Here  </button>
+
+      </form>
+
+      <hr>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
