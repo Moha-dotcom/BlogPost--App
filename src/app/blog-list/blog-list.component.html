@@ -15,33 +15,24 @@
 <body class="p-3 m-0 border-0 bd-example">
 
 <!-- Example Code -->
-
-
 <div class="container">
   <div class="row">
-    <div class="col-md-10 " style="margin: 10px"  >
-
+    <div class="col-md-19 " style="margin: 10px"  >
     <ul >
-
         <div class="card">
-          <h5 class="card-header">{{element.header}}</h5>
+          <h5 class="card-header"> {{element.header}}</h5>
           <div class="card-body">
-            <h5 class="card-title">{{element.author}}</h5>
+            <h5 class="card-title"><span>Author: </span>{{element.author}}</h5>
+
             <p class="card-text">{{element.post}}</p>
-            <a href="#" class="btn btn-primary">{{element.date}}</a>
+            <a href="#" class="btn btn-primary"> <span>Date Posted : </span>{{element.date}}</a>
           </div>
         </div>
-
-
       <hr>
     </ul>
-
-
     </div>
   </div>
 </div>
-
-
 <!-- End Example Code -->
 </body>
 </html>

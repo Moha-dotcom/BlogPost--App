@@ -1,0 +1,19 @@
+a {
+  font-size: 19px;
+}
+#btn1 {
+  width: 120px;
+  height: 30px;
+  margin-left: 200px;
+  background-color: #FF731D;
+  color: white;
+  font-size: 15px;
+}
+
+#btn2 {
+  width: 120px;
+  height: 30px;
+  background-color: white;
+  color: black;
+  font-size: 15px;
+}

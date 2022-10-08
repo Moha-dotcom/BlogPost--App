@@ -11,6 +11,8 @@ import {map} from "rxjs/operators";
 })
 export class AppComponent {
 
+  // @ts-ignore
+  loadfeatures : 'blog';
 
   ngOnInit(){
     this.onFetchData();
@@ -48,19 +50,31 @@ export class AppComponent {
   onFetchData (){
      this.Http.get("http://localhost:8080/api/post")
       .pipe(map((responseDatas) => {
+
         const postArray : blog[] = [];
         for(const keys in responseDatas){
           if(responseDatas.hasOwnProperty(keys)){
+
             // @ts-ignore
-            postArray.push( {...responseDatas[keys], id: keys})
+            postArray.unshift( {...responseDatas[keys], id: keys})
           }
         }
         return postArray;
       }))
       .subscribe(posts => {
+
+
+
         this.BlogPost = posts
     })
   }
 
 
+
+
+
+  onNavigate(feature: string) {
+      // @ts-ignore
+    this.loadfeatures = feature;
+  }
 }

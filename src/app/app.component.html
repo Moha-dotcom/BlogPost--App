@@ -8,18 +8,34 @@
   <title>Document</title>
 </head>
 <body>
-<!--<app-navbar></app-navbar>-->
+<app-navbar (featureSelected)="onNavigate($event)"></app-navbar>
 
-<div class="container">
+
+
+
   <div class="row">
-    <div class="col-md-12 " style="margin: 60px">
-      <app-header></app-header>
-      <app-blog (receive)="onCreatePost($event)"></app-blog>
-      <h1 style="text-align: center; margin-bottom: 40px"><span class="badge bg-primary" >List of Blog Posts</span></h1>
-      <app-blog-list *ngFor="let posts of BlogPost"  [element]="posts" > </app-blog-list>
+    <div class="col-md-5">
+
+      <app-blog *ngIf="loadfeatures === 'blog'" (receive)="onCreatePost($event)"></app-blog>
     </div>
+    <div class="col order-5">
+      <h1 style="text-align: center; margin-bottom: 40px"><span class="badge bg-primary" >List of Blog Posts</span></h1>
+      <app-blog-list  *ngFor="let posts of BlogPost"  [element]="posts" > </app-blog-list>
+    </div>
+
   </div>
-</div>
+
+
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-md-12 " style="margin: 60px">-->
+<!--      <app-header></app-header>-->
+<!--      <app-blog (receive)="onCreatePost($event)"></app-blog>-->
+<!--      <h1 style="text-align: center; margin-bottom: 40px"><span class="badge bg-primary" >List of Blog Posts</span></h1>-->
+<!--      <app-blog-list *ngFor="let posts of BlogPost"  [element]="posts" > </app-blog-list>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
 
 </body>
 </html>

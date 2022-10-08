@@ -9,21 +9,9 @@ import {blog} from "../Entity/blogs.model";
   styleUrls: ['./blog-list.component.css']
 })
 export class BlogListComponent implements OnInit {
-
-
-
-
   // @ts-ignore
   @Input() element : blog
-
   constructor() { }
-
   ngOnInit(): void {
   }
-
-
-
-
-
-
 }
